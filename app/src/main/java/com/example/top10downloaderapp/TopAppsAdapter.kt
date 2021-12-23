@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.top10downloaderapp.databinding.ItemRowBinding
+import android.app.Activity
 
-class TopAppsAdapter(var apps: List<App>): RecyclerView.Adapter<TopAppsAdapter.TopAppsViewHolder>() {
+// The "activity" parameter is used for "setOnClickListener" method (line 25)
+class TopAppsAdapter(private var apps: List<App>, private val activity: Activity): RecyclerView.Adapter<TopAppsAdapter.TopAppsViewHolder>() {
     class TopAppsViewHolder(val binding: ItemRowBinding): RecyclerView.ViewHolder(binding.root) {
 
     }
@@ -18,6 +20,9 @@ class TopAppsAdapter(var apps: List<App>): RecyclerView.Adapter<TopAppsAdapter.T
         val app = apps[position]
         holder.binding.apply {
             appNameTV.text = app.appName
+        }
+        holder.binding.appLL.setOnClickListener {
+            (activity as MainActivity).showSummary(app)
         }
     }
 

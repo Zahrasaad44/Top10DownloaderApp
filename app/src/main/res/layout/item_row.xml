@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appLL"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
 
+
+        <TextView
+            android:id="@+id/appNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#E64343"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    <!--
     <TextView
-        android:id="@+id/appNameTV"
+        android:id="@+id/summaryTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
-        android:textColor="#BD3939"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-
+        android:layout_gravity="center"/>
+  -->
 </LinearLayout>

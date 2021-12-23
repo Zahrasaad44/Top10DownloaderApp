@@ -12,6 +12,7 @@ class XMLParser {
 
     private var text = ""
     private var name = ""
+    private var summary = ""
 
     fun parseRSS(): ArrayList<App> {
         try {
@@ -25,9 +26,12 @@ class XMLParser {
                 when(eventType) {
                     XmlPullParser.TEXT -> text = parser.text
                     XmlPullParser.END_TAG -> when {
+                        tagName.equals("summary", true) -> {
+                            summary = text
+                        }
                         tagName.equals("im:name", true) -> {
                             name = text
-                            feed.add(App(name))
+                            feed.add(App(name, summary))
                         }
                         else -> {}
                     }

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/saad/AndroidStudioProjects/Top10DownloaderApp/app/src/main/res/layout/activity_app_summary.xml" value="0.25" />
         <entry key="..\:/Users/saad/AndroidStudioProjects/Top10DownloaderApp/app/src/main/res/layout/activity_main.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/saad/AndroidStudioProjects/Top10DownloaderApp/app/src/main/res/layout/app_summary.xml" value="0.25" />
         <entry key="..\:/Users/saad/AndroidStudioProjects/Top10DownloaderApp/app/src/main/res/layout/item_row.xml" value="0.24635416666666668" />
       </map>
     </option>

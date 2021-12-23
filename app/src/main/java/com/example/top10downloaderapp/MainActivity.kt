@@ -1,5 +1,6 @@
 package com.example.top10downloaderapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -23,10 +24,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         feed = listOf()
 
-        recyclerAdapter = TopAppsAdapter(feed)
+        recyclerAdapter = TopAppsAdapter(feed, this)
         binding.topAppsRV.adapter = recyclerAdapter
         binding.topAppsRV.layoutManager = LinearLayoutManager(this)
 
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showProgressBar(showProgressBar: Boolean) {
+    private fun showProgressBar(showProgressBar: Boolean) {
         if (showProgressBar) {
             binding.progressBar.isVisible = true
             binding.topAppsRV.isVisible = false
@@ -61,5 +63,11 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.isVisible = false
             binding.topAppsRV.isVisible = true
         }
+    }
+    fun showSummary(app: App) {
+        val intent = Intent(this, AppSummary::class.java)
+        intent.putExtra("appName", app.appName)
+        intent.putExtra("appSummary", app.summary)
+        startActivity(intent)
     }
 }

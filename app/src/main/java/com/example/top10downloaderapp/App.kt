@@ -1,3 +1,3 @@
 package com.example.top10downloaderapp
 
-data class App(val appName: String)
+data class App(val appName: String, val summary: String)

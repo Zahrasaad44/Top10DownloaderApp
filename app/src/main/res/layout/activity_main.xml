@@ -20,6 +20,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appStoreIV" />
 
+    <TextView
+        android:id="@+id/seeSummaryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click on an App to see its summary"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTV" />
+
     <ImageView
         android:id="@+id/appStoreIV"
         android:layout_width="50dp"
@@ -37,14 +48,15 @@
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerTV" />
+        app:layout_constraintTop_toBottomOf="@+id/seeSummaryTV"
+        app:layout_constraintBottom_toTopOf="@+id/getFeedBtn"/>
 
     <Button
         android:id="@+id/getFeedBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#47549C"
-        android:text="Get Feed"
+        android:text="See Apps"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
